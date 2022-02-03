@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable @next/next/no-img-element */
 /** @jsxImportSource @emotion/react */
 import { css } from '@emotion/react'
 import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
