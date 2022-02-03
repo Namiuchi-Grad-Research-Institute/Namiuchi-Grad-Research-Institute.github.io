@@ -7,3 +7,4 @@ Host: https://www.ngri.jp
 
 # Sitemaps
 Sitemap: https://www.ngri.jp/sitemap.xml
+Sitemap: https://www.ngri.jp/sitemap-0.xml
