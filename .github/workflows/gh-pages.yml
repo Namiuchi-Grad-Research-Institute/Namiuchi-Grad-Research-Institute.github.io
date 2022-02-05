@@ -22,7 +22,7 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-node-
     - name: install
-      run: npm install --frozen-lockfile
+      run: npm ci --frozen-lockfile
     - name: build
       run: npm run build
     - name: export
