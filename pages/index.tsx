@@ -7,12 +7,12 @@ import { Image } from '../components/Image';
 
 export default function Home(): JSX.Element {
     return (
-        <div className="container">
+        <div id="l-container">
             <Head>
                 <title>NGRI</title>
             </Head>
             <Header />
-            <main className="main">
+            <main id="l-main">
                 <h1 className="title">NGRI ナミウチグラード研究所</h1>
                 <h2>どんなやつら？</h2>
                 <p>ゲームとかMinecraftのMODとか作ってる学生たちだよ。</p>

@@ -7,11 +7,11 @@ import styles from '../../../../styles/Repos.module.scss';
 
 export default function ReposMCRSOasisTexture() {
     return (
-        <div className="container">
+        <div id="l-container">
             <Head>
                 <title>Repository - NGRI HP</title>
             </Head>
-            <main className="main">
+            <main id="l-main">
                 <h1 className="title">Index of /repos/mc-rp/OasisTexture</h1>
                 <div className={`content ${styles.repoContents}`}>
                     <table>
