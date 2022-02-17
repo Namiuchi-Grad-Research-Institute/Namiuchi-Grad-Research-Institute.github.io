@@ -3,7 +3,7 @@
 import Footer from '../../components/Footer';
 import Head from 'next/head';
 import Link from 'next/link';
-import styles from '../../styles/Repos.module.scss';
+import styles from '../../styles/modules/Repos.module.scss';
 
 export default function ReposHome() {
     return (

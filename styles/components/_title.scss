@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+.title a {
+    color: $NGRI_COLOR;
+    text-decoration: none;
+}
+
+.title a:hover,
+.title a:focus,
+.title a:active {
+    text-decoration: underline;
+}
+
+.title {
+    margin: 0;
+    line-height: 1;
+    font-size: 3rem;
+}
+
+.title,
+.content p {
+    text-align: center;
+}
