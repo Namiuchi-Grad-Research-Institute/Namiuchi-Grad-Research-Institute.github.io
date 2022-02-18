@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@use "tools/layout" as tools;
 
 #l-container {
     padding: 0 2rem;
@@ -18,7 +19,7 @@
     display: flex;
     flex: 1;
     padding: 2rem 0;
-    border-top: 1px solid #eaeaea;
+    border-top: 1px solid tools.$footer-border-top;
     justify-content: center;
     align-items: center;
 }
@@ -38,5 +39,14 @@
     max-width: 800px;
     width: 100%;
     flex-direction: column;
+}
+
+.navi-list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    > li {
+        width: 100%;
+    }
 }
 
