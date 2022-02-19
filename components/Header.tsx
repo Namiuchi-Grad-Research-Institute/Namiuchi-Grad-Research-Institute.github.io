@@ -7,7 +7,7 @@ export default function Header(): JSX.Element {
     return (
         <header id="l-header">
             <div className="header-logo">
-                <img src="https://forum.ngri.jp/res/logo.png" alt="NGRIロゴ" />
+                <img className="logo-img" src="https://forum.ngri.jp/res/logo.png" alt="NGRIロゴ" />
             </div>
             <nav id="l-navi">
                 <ul className="navi-list">
