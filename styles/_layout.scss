@@ -47,12 +47,14 @@
     > li {
         display: block;
         flex: auto;
-        margin: 0.5rem 0;
+        margin: 1rem 0 0 0;
         width: 100%;
         a {
             color: tools.$header-char-color;
             border-bottom: solid 3px;
             border-bottom-color: tools.$header-char-color;
+            margin: 0;
+            width: 100%;
             transition: color 1s linear 0, border-bottom-color 1s linear 0;
         }
         a:active, a:hover {
