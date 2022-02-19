@@ -18,6 +18,7 @@
 #l-header {
     background: tools.$header-bg-color;
     color: tools.$header-char-color;
+    margin: 0;
     a {
         color: tools.$header-char-color;
         transition: color 1s;
@@ -48,6 +49,7 @@
 
 .navi-list {
     display: flex;
+    flex: 1;
     flex-direction: column;
     list-style: none;
     > li {
