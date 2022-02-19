@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 'use strict';
 
 import Link from 'next/link';
@@ -8,7 +9,7 @@ export default function Header(): JSX.Element {
     return (
         <header id="l-header">
             <div className={styles['header-logo']}>
-                <img className={styles['logo-img']} src="https://forum.ngri.jp/res/logo.png" alt="NGRIロゴ" />
+                <img className={styles['logo-img']} src="https://forum.ngri.jp/res/logo-with-NGRI.png" alt="NGRIロゴ" />
             </div>
             <nav id="l-navi">
                 <ul className="navi-list">
