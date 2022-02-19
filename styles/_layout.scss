@@ -18,12 +18,12 @@
 #l-header {
     background: tools.$header-bg-color;
     color: tools.$header-char-color;
-    margin: -2rem;
+    margin: 0 -2rem;
     a {
         color: tools.$header-char-color;
         transition: color 1s;
     }
-    a:active, a:hover, a:link, a:visited {
+    a:active, a:hover {
         color: tools.$header-link-color;
     }
 }
