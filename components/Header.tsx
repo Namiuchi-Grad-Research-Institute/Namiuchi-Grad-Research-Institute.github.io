@@ -1,13 +1,14 @@
 'use strict';
 
 import Link from 'next/link';
+import styles from '../styles/modules/Header.module.scss';
 import { Image } from './Image';
 
 export default function Header(): JSX.Element {
     return (
         <header id="l-header">
-            <div className="header-logo">
-                <img className="logo-img" src="https://forum.ngri.jp/res/logo.png" alt="NGRIロゴ" />
+            <div className={styles['header-logo']}>
+                <img className={styles['logo-img']} src="https://forum.ngri.jp/res/logo.png" alt="NGRIロゴ" />
             </div>
             <nav id="l-navi">
                 <ul className="navi-list">
