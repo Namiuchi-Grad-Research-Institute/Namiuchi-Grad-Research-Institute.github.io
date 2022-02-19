@@ -1,4 +1,8 @@
 @charset "UTF-8";
+@use "global" as *;
 
 $footer-border-top: #fafafa;
+$header-bg-color: #000;
+$header-char-color: #fff;
+$header-link-color: $NGRI_COLOR;
 

@@ -15,6 +15,18 @@
     align-items: center;
 }
 
+#l-header {
+    background: tools.$header-bg-color;
+    color: tools.$header-char-color;
+    a {
+        color: tools.$header-char-color;
+        transition: color 1s;
+    }
+    a:active, a:hover, a:link, a:visited {
+        color: tools.$header-link-color;
+    }
+}
+
 #l-footer {
     display: flex;
     flex: 1;
@@ -22,13 +34,6 @@
     border-top: 1px solid tools.$footer-border-top;
     justify-content: center;
     align-items: center;
-}
-
-#l-footer a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
 }
 
 .l-grid {
