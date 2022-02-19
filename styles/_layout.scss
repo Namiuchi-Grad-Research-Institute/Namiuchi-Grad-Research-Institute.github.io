@@ -47,10 +47,10 @@
     > li {
         display: block;
         flex: auto;
+        margin: 0.5rem 0;
         width: 100%;
         a {
             color: tools.$header-char-color;
-            padding: 0.5rem;
             border-bottom: solid 3px;
             border-bottom-color: tools.$header-char-color;
             transition: color 1s linear 0, border-bottom-color 1s linear 0;
