@@ -13,6 +13,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    .index {
+        background: rgba(0, 0, 0, 0.1);
+        border: solid 3px #ccc;
+    }
 }
 
 #l-header {
