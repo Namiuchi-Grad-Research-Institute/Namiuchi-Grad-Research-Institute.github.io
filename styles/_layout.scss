@@ -14,11 +14,15 @@
     justify-content: center;
     align-items: center;
     .index {
+        position: absolute;
+        left: 0;
+        right: 0;
         background: rgba(0, 0, 0, 0.1);
         margin-bottom: 1rem;
         padding: 0.5rem 1rem 0 0;
         border: solid 3px #ccc;
         border-radius: 6px;
+        width: max(50vh, 200px);
         > p {
             padding-left: 0.5rem;
             font-weight: bolder;
