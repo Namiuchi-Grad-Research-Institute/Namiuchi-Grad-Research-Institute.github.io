@@ -15,9 +15,12 @@ export default function About(): JSX.Element {
             <Header />
             <main id="l-main">
                 <h1 className="title">About</h1>
-                <ul className="index">
-                    <li><Link href="#member"><a>メンバー</a></Link></li>
-                </ul>
+                <div className="index">
+                    <p>目次</p>
+                    <ul>
+                        <li><Link href="#member"><a>メンバー</a></Link></li>
+                    </ul>
+                </div>
                 <h2 id="member">メンバー</h2>
                 <ul>
                     <li>
