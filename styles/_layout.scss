@@ -54,11 +54,12 @@
         border-bottom-color: tools.$header-char-color;
         width: 100%;
         text-align: center;
+        transition: border-bottom-color 3s linear 0;
         a {
             color: tools.$header-char-color;
             margin: 0;
             width: 100%;
-            transition: color 1s linear 0;
+            transition: color 3s linear 0;
         }
         a:active, a:hover {
             color: tools.$header-link-color;
