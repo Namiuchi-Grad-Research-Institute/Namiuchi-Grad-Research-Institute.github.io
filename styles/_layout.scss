@@ -59,7 +59,7 @@
             color: tools.$header-char-color;
             margin: 0;
             width: 100%;
-            transition: color 3s linear 0;
+            transition: color .3s linear 0;
         }
         a:active, a:hover {
             color: tools.$header-link-color;
