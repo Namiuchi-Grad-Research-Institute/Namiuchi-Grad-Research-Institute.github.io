@@ -15,8 +15,11 @@
     align-items: center;
     .index {
         background: rgba(0, 0, 0, 0.1);
-        padding: 1rem;
+        padding-right: 1rem;
         border: solid 3px #ccc;
+        > p {
+            font-weight: bolder;
+        }
     }
 }
 
