@@ -16,7 +16,8 @@
     .index {
         background: rgba(0, 0, 0, 0.1);
         padding: 0.5rem 1rem 0 0;
-        border: solid 3px #ccc;
+        border: solid 2px #ccc;
+        border-radius: 1px;
         > p {
             padding-left: 0.5rem;
             font-weight: bolder;
