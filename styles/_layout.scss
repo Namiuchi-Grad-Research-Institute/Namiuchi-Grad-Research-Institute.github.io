@@ -50,7 +50,7 @@
         @include tools.hover-underline('slide', 'bottom', 5px, tools.$header-link-color);
         display: block;
         flex: auto;
-        margin: 1rem 0 0 0;
+        margin: 1rem 0 -10px 0;
         border-bottom: solid 5px;
         border-bottom-color: tools.$header-char-color;
         width: 100%;
