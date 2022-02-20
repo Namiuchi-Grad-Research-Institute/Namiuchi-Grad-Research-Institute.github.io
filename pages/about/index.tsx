@@ -14,7 +14,10 @@ export default function About(): JSX.Element {
             <Header />
             <main id="l-main">
                 <h1 className="title">About</h1>
-                <h2>メンバー</h2>
+                <ul>
+                    <li><Link href="#member"><a>メンバー</a></Link></li>
+                </ul>
+                <h2 id="member">メンバー</h2>
                 <ul>
                     <li>
                         <ruby>渡波 空<rt>となみ そら</rt></ruby>
