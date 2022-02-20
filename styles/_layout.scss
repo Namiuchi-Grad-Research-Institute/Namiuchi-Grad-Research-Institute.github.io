@@ -47,7 +47,7 @@
     margin: 0;
     padding: 0;
     > li {
-        @include tools.hover-underline('slide', 'center', 5px, tools.$header-link-color);
+        @include tools.hover-underline('slide', 'bottom', 5px, tools.$header-link-color);
         display: block;
         flex: auto;
         margin: 1rem 0 0 0;
