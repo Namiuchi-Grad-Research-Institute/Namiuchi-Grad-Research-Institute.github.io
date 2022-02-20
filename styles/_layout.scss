@@ -19,7 +19,7 @@
         padding: 0.5rem 1rem 0 0;
         border: solid 3px #ccc;
         border-radius: 6px;
-        width: max(50vh, 200px);
+        width: min(50%, 200px);
         > p {
             padding-left: 0.5rem;
             font-weight: bolder;
