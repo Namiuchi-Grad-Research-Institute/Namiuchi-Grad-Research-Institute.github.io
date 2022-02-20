@@ -48,9 +48,10 @@
         display: block;
         flex: auto;
         margin: 1rem 0 0 0;
-        border-bottom: solid 3px;
+        border-bottom: solid 5px;
         border-bottom-color: tools.$header-char-color;
         width: 100%;
+        text-align: center;
         a {
             color: tools.$header-char-color;
             margin: 0;
