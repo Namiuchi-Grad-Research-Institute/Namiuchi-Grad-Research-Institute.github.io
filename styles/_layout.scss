@@ -47,6 +47,7 @@
     margin: 0;
     padding: 0;
     > li {
+        @include tools.hover-underline('slide', 'center', 5px, tools.$header-link-color);
         display: block;
         flex: auto;
         margin: 1rem 0 0 0;
@@ -54,7 +55,6 @@
         border-bottom-color: tools.$header-char-color;
         width: 100%;
         text-align: center;
-        transition: border-bottom-color 3s linear 0;
         a {
             color: tools.$header-char-color;
             margin: 0;
@@ -64,9 +64,6 @@
         a:active, a:hover {
             color: tools.$header-link-color;
         }
-    }
-    > li:active, li:hover {
-        border-bottom-color: tools.$header-link-color;
     }
 }
 
