@@ -44,6 +44,10 @@ export default function About(): JSX.Element {
                         NULL
                         <p>翻訳担当。本人曰く基本的に英語だが、別言語もやってはみるとのこと。</p>
                     </li>
+                    <li>
+                        <ruby>奈良県京都市<rt>ならけんきょうとし</rt></ruby>
+                        <p>会社で言う社長的な人。みんなこの人繋がりで集まった。一応人工知能系。</p>
+                    </li>
                 </ul>
             </main>
             <Footer />
