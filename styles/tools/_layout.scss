@@ -28,7 +28,13 @@ $header-link-color: $NGRI_COLOR;
             transition: .3s;
             opacity: 0;
             visibility: hidden;
+            @if $dir == bottom {
+                bottom: $weight * -2;
+            } @else {
+                bottom: $weight;
+            }
         } @else if $type == slide {
+            bottom: $weight * -1;
             transform: scale(0, 1);
             transition: transform .3s;
             @if $dir == left-right or $dir == right-in-left {
@@ -42,6 +48,7 @@ $header-link-color: $NGRI_COLOR;
     }
     &:hover::after {
         @if $type == fade {
+            bottom: $weight * -1;
             opacity: 1;
             visibility: visible;
         } @else if $type == slide {
