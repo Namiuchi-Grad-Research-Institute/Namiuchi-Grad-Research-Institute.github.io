@@ -8,7 +8,7 @@ import { Image } from '../../components/Image';
 import { role2str } from '../../lib/MemberData';
 import { useRouter } from 'next/router';
 
-export default function Member(): JSX.Element {
+export default async function Member(): JSX.Element {
     const router = useRouter();
     const { pid } = router.query;
     const res: Response = await fetch(`https://forum.ngri.jp/api/member/getdata/?name=${pid}`);
