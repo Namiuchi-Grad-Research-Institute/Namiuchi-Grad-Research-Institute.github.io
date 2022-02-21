@@ -8,8 +8,11 @@ import { GetServerSideProps, GetServerSidePropsResult } from 'next';
 import { Image } from '../../components/Image';
 import { role2str } from '../../lib/MemberData';
 import { NextRouter, useRouter } from 'next/router';
+import { resolveDynamicRoute } from '../../lib/Route';
+import { useEffect, useState } from 'react';
 
 export default function Member(): JSX.Element {
+    const [resolvedRoute, setResolvedRoute] = useState(undefined);
     const router: NextRouter = useRouter();
     const { name } = router.query;
     const { member, err } = useSWR(`https://forum.ngri.jp/api/member/getdata/?name=${name}`, (...args) => fetch(...args).then(res => res.json()));
@@ -55,4 +58,5 @@ export default function Member(): JSX.Element {
         </div>
     );
 }
+
 
