@@ -1,6 +1,6 @@
 'use strict';
 
-import { addBasePath, delBasePath } from 'next/router';
+import { addBasepath, delBasepath } from 'next/router';
 import { UrlObject } from 'url';
 import { denormalizePagePath } from 'next/dist/server/denormalize-page-path';
 import { getRouteRegex } from 'next/dist/shared/lib/router/utils/route-regex';
