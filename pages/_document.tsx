@@ -26,7 +26,7 @@ export default class MyDocument extends Document {
                         `
                     }} />
                     <link rel="preconnect" href="https://fonts.googleapis.com/" />
-                    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+                    <link rel="preconnect" href="https://fonts.gstatic.com/" crossOrigin />
                     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Sawarabi+Mincho&display=swap" />
                     <link rel="icon" href="/favicon.ico" />
                     <meta name="description" content="ゲーム制作集団「NGRI」のホームページです。" />
