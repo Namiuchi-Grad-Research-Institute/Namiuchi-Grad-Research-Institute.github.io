@@ -7,12 +7,12 @@ import useSWR from 'swr';
 import { GetServerSideProps, GetServerSidePropsResult } from 'next';
 import { Image } from '../../components/Image';
 import { role2str } from '../../lib/MemberData';
-import { useRouter } from 'next/router';
+import { NextRouter, useRouter } from 'next/router';
 
 export default function Member(): JSX.Element {
-    const router = useRouter();
+    const router: NextRouter = useRouter();
     const { name } = router.query;
-    const { member, err }: any = useSWR(`https://forum.ngri.jp/api/member/getdata/?name=${name}`, fetch);
+    const { member, err } = useSWR(`https://forum.ngri.jp/api/member/getdata/?name=${name}`, (...args) => fetch(...args).then(res => res.json()));
     if(err) return (
         <div id="l-container">
             <Head>
