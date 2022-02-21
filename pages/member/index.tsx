@@ -8,16 +8,11 @@ import { Image } from '../../components/Image';
 import { role2str } from '../../lib/MemberData';
 import { useRouter } from 'next/router';
 
-type Props = {
-    member: {
-        birthday: string,
-        gender: string[],
-        name: string,
-        role: string[]
-    }
-};
-
-export default function Home({ member }: Props): JSX.Element {
+export default function Member(): JSX.Element {
+    const router = useRouter();
+    const { pid } = router.query;
+    const res: Response = await fetch(`https://forum.ngri.jp/api/member/getdata/?name=${pid}`);
+    const member: any = await res.json();
     return (
         <div id="l-container">
             <Head>
@@ -33,17 +28,5 @@ export default function Home({ member }: Props): JSX.Element {
             <Footer />
         </div>
     );
-}
-
-export const getServerSideProps: GetServerSideProps = async (): Promise<GetServerSidePropsResult<{ [key: string]: any; }>> => {
-    const router = useRouter();
-    const { pid } = router.query;
-    const res: Response = await fetch(`https://forum.ngri.jp/api/member/getdata/?name=${pid}`);
-    const member: any = await res.json();
-    return {
-        props: {
-            member
-        }
-    };
 }
 
