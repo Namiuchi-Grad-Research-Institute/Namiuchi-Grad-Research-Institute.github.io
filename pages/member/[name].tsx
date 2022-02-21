@@ -11,8 +11,8 @@ import { useRouter } from 'next/router';
 
 export default function Member(): JSX.Element {
     const router = useRouter();
-    const { pid } = router.query;
-    const { member, err }: any = useSWR(`https://forum.ngri.jp/api/member/getdata/?name=${pid}`, fetch);
+    const { name } = router.query;
+    const { member, err }: any = useSWR(`https://forum.ngri.jp/api/member/getdata/?name=${name}`, fetch);
     if(err) return (
         <div id="l-container">
             <Head>
