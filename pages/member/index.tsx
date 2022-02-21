@@ -9,7 +9,7 @@ import { Image } from '../../components/Image';
 import { role2str } from '../../lib/MemberData';
 import { useRouter } from 'next/router';
 
-export default function Member(): Promise<JSX.Element> {
+export default function Member(): JSX.Element {
     const router = useRouter();
     const { pid } = router.query;
     const { member, err }: any = useSWR(`https://forum.ngri.jp/api/member/getdata/?name=${pid}`, fetch);
