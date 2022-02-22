@@ -3,11 +3,11 @@
 import Error from "next/error";
 import { resolveDynamicRoute } from '../lib/Route';
 import { useEffect, useState } from "react";
-import { NextRouter, useRouter } from "next/router";
+import { NextRouter, Router, getRouter } from "next/router";
 
 export default function NotFoundPage(): JSX.Element {
     const [isError, setIsError] = useState(false);
-    const router: NextRouter = useRouter();
+    const router: Router = getRouter();
     useEffect(() => {
         (async () => {
             const pages = await router.pageLoader.getPageList();
