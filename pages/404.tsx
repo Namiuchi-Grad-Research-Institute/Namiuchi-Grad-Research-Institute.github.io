@@ -1,13 +1,14 @@
 'use strict';
 
-import Error from "next/error";
+import Error from 'next/error';
+import SingletonRouter from 'next/router';
 import { resolveDynamicRoute } from '../lib/Route';
-import { useEffect, useState } from "react";
-import { Router, singletonRouter } from "next/router";
+import { useEffect, useState } from 'react';
+import type { SingletonRouter } from 'next/router';
 
 export default function NotFoundPage(): JSX.Element {
     const [isError, setIsError] = useState(false);
-    const router: Router = singletonRouter.router!;
+    const router: SingletonRouter = SingletonRouter.router!;
     useEffect(() => {
         (async () => {
             const pages = await router.pageLoader.getPageList();
