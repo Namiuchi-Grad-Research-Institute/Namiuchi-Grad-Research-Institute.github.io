@@ -3,7 +3,9 @@
 import Footer from '../../components/Footer';
 import Head from 'next/head';
 import Header from '../../components/Header';
+import { GetStaticPathsResult, GetStaticPropsResult }
 import { Image } from '../../components/Image';
+import { ParsedUrlQuery } from 'querystring';
 import { role2str } from '../../lib/MemberData';
 
 type Member = {
@@ -16,6 +18,10 @@ type Member = {
 type Props = {
     member: Member
 };
+
+interface Params extends ParsedUrlQuery {
+    name: string
+}
 
 export default function Member({ member }: Props): JSX.Element {
     return (
@@ -35,14 +41,14 @@ export default function Member({ member }: Props): JSX.Element {
     );
 }
 
-export async function getStaticPaths() {
+export async function getStaticPaths(): Promise<GetStaticPathsResult<Params>> {
     const res = await fetch('https://forum.ngri.jp/api/member/getdata/?name=all');
     const members: Member[] = await res.json();
     const paths: string[] = members.map((member: Member) => `/member/${member.name}`);
     return { fallback: false, paths };
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params }: Params): Promise<GetStaticPropsResult<Member>> {
     const res = await fetch(`https://forum.ngri.jp/api/member/getdata/?name=${params.name}`);
     const member: Member = await res.json();
     return { props: { member } };
