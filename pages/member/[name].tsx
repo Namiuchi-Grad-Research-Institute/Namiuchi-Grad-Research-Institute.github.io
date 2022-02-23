@@ -3,45 +3,19 @@
 import Footer from '../../components/Footer';
 import Head from 'next/head';
 import Header from '../../components/Header';
-import useSWR from 'swr';
-import { GetServerSideProps, GetServerSidePropsResult } from 'next';
 import { Image } from '../../components/Image';
 import { role2str } from '../../lib/MemberData';
-import { NextRouter, useRouter } from 'next/router';
-import { resolveDynamicRoute } from '../../lib/Route';
-import { useEffect, useState } from 'react';
 
-export default function Member(): JSX.Element {
-    const [resolvedRoute, setResolvedRoute] = useState(undefined);
-    const router: NextRouter = useRouter();
-    const { name } = router.query;
-    const { member, err } = useSWR(`https://forum.ngri.jp/api/member/getdata/?name=${name}`, (...args) => fetch(...args).then(res => res.json()));
-    if(err) return (
-        <div id="l-container">
-            <Head>
-                <title>メンバー - NGRI</title>
-            </Head>
-            <Header />
-            <main id="l-main">
-                <h1 className="title">メンバー</h1>
-                <p>読み込みに失敗しました。</p>
-            </main>
-            <Footer />
-        </div>
-    );
-    if(!member) return (
-        <div id="l-container">
-            <Head>
-                <title>メンバー - NGRI</title>
-            </Head>
-            <Header />
-            <main id="l-main">
-                <h1 className="title">メンバー</h1>
-                <p>読み込み中...</p>
-            </main>
-            <Footer />
-        </div>
-    );
+type Props = {
+    member: {
+        birthday: string,
+        gender: string[],
+        name: string,
+        role: string[]
+    }
+};
+
+export default function Member({ member }: Props): JSX.Element {
     return (
         <div id="l-container">
             <Head>
@@ -57,5 +31,18 @@ export default function Member(): JSX.Element {
             <Footer />
         </div>
     );
+}
+
+export async function getStaticPaths() {
+    const res = await fetch('https://forum.ngri.jp/api/member/getdata/?name=all');
+    const members = await res.json();
+    const paths = members.map(member => `/member/${member.name}`);
+    return { fallback: false, paths };
+}
+
+export async function getStaticProps({ params }) {
+    const res = await fetch(`https://forum.ngri.jp/api/member/getdata/?name=${params.name}`);
+    const member = await res.json();
+    return { props: { member } };
 }
 
