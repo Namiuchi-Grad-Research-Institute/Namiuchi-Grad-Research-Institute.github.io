@@ -3,7 +3,7 @@
 import Footer from '../../components/Footer';
 import Head from 'next/head';
 import Header from '../../components/Header';
-import { GetStaticPathsResult, GetStaticPropsResult }
+import { GetStaticPathsResult, GetStaticPropsResult } from 'next';
 import { Image } from '../../components/Image';
 import { ParsedUrlQuery } from 'querystring';
 import { role2str } from '../../lib/MemberData';
