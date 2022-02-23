@@ -6,13 +6,15 @@ import Header from '../../components/Header';
 import { Image } from '../../components/Image';
 import { role2str } from '../../lib/MemberData';
 
+type Member = {
+    birthday: string,
+    gender: string[],
+    name: string,
+    role: string[]
+};
+
 type Props = {
-    member: {
-        birthday: string,
-        gender: string[],
-        name: string,
-        role: string[]
-    }
+    member: Member
 };
 
 export default function Member({ member }: Props): JSX.Element {
@@ -35,14 +37,14 @@ export default function Member({ member }: Props): JSX.Element {
 
 export async function getStaticPaths() {
     const res = await fetch('https://forum.ngri.jp/api/member/getdata/?name=all');
-    const members = await res.json();
-    const paths = members.map(member => `/member/${member.name}`);
+    const members: Member[] = await res.json();
+    const paths: string[] = members.map((member: Member) => `/member/${member.name}`);
     return { fallback: false, paths };
 }
 
 export async function getStaticProps({ params }) {
     const res = await fetch(`https://forum.ngri.jp/api/member/getdata/?name=${params.name}`);
-    const member = await res.json();
+    const member: Member = await res.json();
     return { props: { member } };
 }
 
