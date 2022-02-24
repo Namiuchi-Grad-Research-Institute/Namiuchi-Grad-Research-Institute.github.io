@@ -3,7 +3,7 @@
 import Footer from '../../components/Footer';
 import Head from 'next/head';
 import Header from '../../components/Header';
-import { GetStaticPathsResult, GetStaticPropsResult } from 'next';
+import { GetStaticPathsResult, GetStaticPropsContext, GetStaticPropsResult } from 'next';
 import { Image } from '../../components/Image';
 import { ParsedUrlQuery } from 'querystring';
 import { role2str } from '../../lib/MemberData';
@@ -48,8 +48,8 @@ export async function getStaticPaths(): Promise<GetStaticPathsResult<Params>> {
     return { fallback: false, paths };
 }
 
-export async function getStaticProps({ params }: Params): Promise<GetStaticPropsResult<Member>> {
-    const res: Response = await fetch(`https://forum.ngri.jp/api/member/getdata/?name=${params!.name}`);
+export async function getStaticProps(ctx: GetStaticPropsContext<Params, false>): Promise<GetStaticPropsResult<Member>> {
+    const res: Response = await fetch(`https://forum.ngri.jp/api/member/getdata/?name=${ctx.params!.name}`);
     const member: Member = await res.json();
     return { props: { member } };
 }
