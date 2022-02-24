@@ -49,7 +49,7 @@ export async function getStaticPaths(): Promise<GetStaticPathsResult<Params>> {
 }
 
 export async function getStaticProps({ params }: Params): Promise<GetStaticPropsResult<Member>> {
-    const res: Response = await fetch(`https://forum.ngri.jp/api/member/getdata/?name=${params.name}`);
+    const res: Response = await fetch(`https://forum.ngri.jp/api/member/getdata/?name=${params!.name}`);
     const member: Member = await res.json();
     return { props: { member } };
 }
