@@ -24,7 +24,7 @@ export default function About(): JSX.Element {
                 <h2 id="member">メンバー</h2>
                 <ul>
                     <li>
-                        <Link href="/member/渡波+空"><a><ruby>渡波 空<rt>となみ そら</rt></ruby></a></Link>
+                        <Link href="/member/渡波%20空"><a><ruby>渡波 空<rt>となみ そら</rt></ruby></a></Link>
                         <p>デザインと翻訳以外は基本何でもやってる人。何気に創設者。</p>
                     </li>
                     <li>
