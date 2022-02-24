@@ -32,8 +32,8 @@ export default function Member({ member }: Props): JSX.Element {
             <Header />
             <main id="l-main">
                 <h1 className="title">{member.name}</h1>
-                <p>性別：女{member.gender[0].substring(1)}% 男{member.gender[0].substring(1)}%</p>
-                <p>誕生日：{member.birthday.split('-')[0]}年{member.birthday.split('-')[1]}月{member.birthday.split('-')[2]}日</p>
+                <p>性別：女{member.gender[0].substring(1)}% 男{member.gender[1].substring(1)}%</p>
+                <p>誕生日(Y/M/D)：{member.birthday.split('-')[0]}/{member.birthday.split('-')[1]}/{member.birthday.split('-')[2]}</p>
                 <p>役職：{role2str(member.role)}</p>
             </main>
             <Footer />
