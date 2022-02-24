@@ -48,7 +48,7 @@ export async function getStaticPaths(): Promise<GetStaticPathsResult<Params>> {
     return { fallback: false, paths };
 }
 
-export async function getStaticProps(ctx: GetStaticPropsContext<Params, false>): Promise<GetStaticPropsResult<Member>> {
+export async function getStaticProps(ctx: GetStaticPropsContext<Params, false>): Promise<GetStaticPropsResult<Props>> {
     const res: Response = await fetch(`https://forum.ngri.jp/api/member/getdata/?name=${ctx.params!.name}`);
     const member: Member = await res.json();
     return { props: { member } };
