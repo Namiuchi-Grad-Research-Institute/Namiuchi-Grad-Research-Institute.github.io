@@ -42,7 +42,7 @@ export default function Member({ member }: Props): JSX.Element {
 }
 
 export async function getStaticPaths(): Promise<GetStaticPathsResult<Params>> {
-    const res = await fetch('https://forum.ngri.jp/api/member/getdata/?name=all');
+    const res: Response = await fetch('https://forum.ngri.jp/api/member/getdata/?name=all');
     const members: Member[] = await res.json();
     const paths: string[] = members.map((member: Member) => `/member/${member.name}`);
     return { fallback: false, paths };
