@@ -37,7 +37,7 @@
     {
         "name": "Chocolate Quest Repoured",
         "url": "curse:cqrepoured",
-        "version": "1.12.2-2.6.5B"
+        "version": "1.12.2-2.6.7B"
     },
     {
         "name": "CodeChicken Lib",
@@ -52,7 +52,7 @@
     {
         "name": "CreativeCore",
         "url": "curse",
-        "version": "v1.10.69_mc1.12.2"
+        "version": "v1.10.70_mc1.12.2"
     },
     {
         "name": "EnderCore",
@@ -87,7 +87,7 @@
     {
         "name": "GeckoLib",
         "url": "curse",
-        "version": "forge-1.12.2-3.0.13"
+        "version": "forge-1.12.2-3.0.21"
     },
     {
         "name": "GraveStone Mod",
