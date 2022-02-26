@@ -1,0 +1,248 @@
+[
+    {
+        "name": "Minecraft",
+        "url": "https://www.minecraft.net/ja-jp/",
+        "version": "1.12.2"
+    },
+    {
+        "name": "Minecraft Forge",
+        "url": "https://files.minecraftforge.net/net/minecraftforge/forge/index_1.12.2.html",
+        "version": "14.23.5.2860"
+    },
+    {
+        "name": "Akuto Engine",
+        "url": "curse",
+        "version": "2.0.13"
+    },
+    {
+        "name": "AkutoLib",
+        "url": "curse",
+        "version": "3.0.1"
+    },
+    {
+        "name": "Alternating Flux",
+        "url": "curse",
+        "version": "0.12.2-2"
+    },
+    {
+        "name": "BuildCraft",
+        "url": "curse",
+        "version": "all-7.99.24.8"
+    },
+    {
+        "name": "CB Multipart",
+        "url": "curse",
+        "version": "1.12.2-2.6.2.83-universal"
+    },
+    {
+        "name": "Chocolate Quest Repoured",
+        "url": "curse:cqrepoured",
+        "version": "1.12.2-2.6.5B"
+    },
+    {
+        "name": "CodeChicken Lib",
+        "url": "curse:codechicken-lib-1-8",
+        "version": "3.2.3.358-universal"
+    },
+    {
+        "name": "Cosmetic Armor Reworked",
+        "url": "curse",
+        "version": "1.12.2-v5a"
+    },
+    {
+        "name": "CreativeCore",
+        "url": "curse",
+        "version": "v1.10.69_mc1.12.2"
+    },
+    {
+        "name": "EnderCore",
+        "url": "curse",
+        "version": "1.12.2-0.5.76"
+    },
+    {
+        "name": "Ender IO",
+        "url": "curse",
+        "version": "1.12.2-5.3.70"
+    },
+    {
+        "name": "Ender IO Endergy",
+        "url": "curse",
+        "version": "1.12.2-5.3.70"
+    },
+    {
+        "name": "Energy Converters",
+        "url": "curse",
+        "version": "1.12.2-1.2.7.30"
+    },
+    {
+        "name": "Galacticraft-Planets",
+        "url": "https://micdoodle8.com/mods/galacticraft/downloads/",
+        "version": "1.12.2-4.0.2.280"
+    },
+    {
+        "name": "GalacticraftCore",
+        "url": "https://micdoodle8.com/mods/galacticraft/downloads/",
+        "version": "1.12.2-4.0.2.280"
+    },
+    {
+        "name": "GeckoLib",
+        "url": "curse",
+        "version": "forge-1.12.2-3.0.13"
+    },
+    {
+        "name": "GraveStone Mod",
+        "url": "curse",
+        "version": "1.10.3"
+    },
+    {
+        "name": "GunpowderLib",
+        "url": "curse",
+        "version": "1.12.2-1.1"
+    },
+    {
+        "name": "HoloInventory",
+        "url": "curse",
+        "version": "1.12.2-2.1.1.151"
+    },
+    {
+        "name": "Immersive Cables",
+        "url": "curse",
+        "version": "1.12.2-1.3.2"
+    },
+    {
+        "name": "Immersive Engineering",
+        "url": "curse",
+        "version": "0.12-98"
+    },
+    {
+        "name": "IndustrialCraft² experimental",
+        "url": "curse:industrial-craft",
+        "version": "2.8.221-ex112"
+    },
+    {
+        "name": "Industrial Foregoing",
+        "url": "curse",
+        "version": "1.12.2-1.11"
+    },
+    {
+        "name": "JourneyMap",
+        "url": "curse",
+        "version": "1.12.2-5.7.1"
+    },
+    {
+        "name": "Just Enough Items",
+        "url": "curse:jei",
+        "version": "4.16.1.302"
+    },
+    {
+        "name": "Logistics Pipes",
+        "url": "curse",
+        "version": "0.10.4.7"
+    },
+    {
+        "name": "Mantle",
+        "url": "curse",
+        "version": "1.12-1.3.3.55"
+    },
+    {
+        "name": "MicdoodleCore",
+        "url": "https://micdoodle8.com/mods/galacticraft/downloads/",
+        "version": "1.12.2-4.0.2.280"
+    },
+    {
+        "name": "MrTJPCore",
+        "url": "curse",
+        "version": "1.12.2-2.1.4.43-universal"
+    },
+    {
+        "name": "Mysterious Mountain Lib",
+        "url": "curse",
+        "version": "2.3.0"
+    },
+    {
+        "name": "NotEnoughItems",
+        "url": "curse:not-enough-items-1-8",
+        "version": "1.12.2-2.4.3.245-universal"
+    },
+    {
+        "name": "OnlinePictureFrame",
+        "url": "curse",
+        "version": "v1.5.0-pre1_mc1.12.2"
+    },
+    {
+        "name": "Project Red - Base",
+        "url": "curse:project-red-core",
+        "version": "1.12.2-4.9.4.120"
+    },
+    {
+        "name": "Reach Fix",
+        "url": "curse",
+        "version": "1.12.2-1.0.1"
+    },
+    {
+        "name": "Reborn Core",
+        "url": "curse:reborncore",
+        "version": "1.12.2-3.19.5-universal"
+    },
+    {
+        "name": "Reborn Storage",
+        "url": "curse:rebornstorage",
+        "version": "1.12.2-3.3.4.1"
+    },
+    {
+        "name": "Refined Storage",
+        "url": "curse",
+        "version": "1.6.16"
+    },
+    {
+        "name": "RSInfiniteWireless",
+        "url": "curse",
+        "version": "1.2"
+    },
+    {
+        "name": "Shadowfacts' Forgelin",
+        "url": "curse",
+        "version": "1.8.4"
+    },
+    {
+        "name": "StorageBox",
+        "url": "cursecustom:break-all-of-the-same-block-and-more/files/2740435/",
+        "version": "v3.2.0"
+    },
+    {
+        "name": "Tesla Core Lib",
+        "url": "curse",
+        "version": "1.12.2-1.0.18"
+    },
+    {
+        "name": "The Twilight Forest",
+        "url": "curse",
+        "version": "1.12.2-3.11.1021-universal"
+    },
+    {
+        "name": "Tinkers' Construct",
+        "url": "curse",
+        "version": "1.12.2-2.13.0.183"
+    },
+    {
+        "name": "Tinkers' Tool Leveling",
+        "url": "curse",
+        "version": "1.12.2-1.1.0"
+    },
+    {
+        "name": "TofuCraftReload",
+        "url": "curse",
+        "version": "0.1.0.9"
+    },
+    {
+        "name": "Tree Growing Simulator",
+        "url": "curse",
+        "version": "2017-1.0.1"
+    },
+    {
+        "name": "Wireless Redstone CBE",
+        "url": "curse",
+        "version": "1.12.2-2.3.2.33-universal"
+    }
+]
+

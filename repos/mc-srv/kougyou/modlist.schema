@@ -1,0 +1,30 @@
+{
+    "items": [
+        {
+            "properties": {
+                "name": {
+                    "title": "MOD名",
+                    "type": "string"
+                },
+                "url": {
+                    "title": "公開URL",
+                    "type": "string"
+                },
+                "version": {
+                    "title": "バージョン",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name",
+                "url",
+                "version"
+            ],
+            "title": "MOD"
+            "type": "object"
+        }
+    ],
+    "title": "MODリスト",
+    "type": "array"
+}
+
