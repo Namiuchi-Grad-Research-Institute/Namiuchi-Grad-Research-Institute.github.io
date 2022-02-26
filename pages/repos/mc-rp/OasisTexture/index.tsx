@@ -5,7 +5,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import styles from '../../../../styles/modules/Repos.module.scss';
 
-export default function ReposMCRSOasisTexture() {
+export default function ReposMCRPOasisTexture() {
     return (
         <div id="l-container">
             <Head>

@@ -5,14 +5,14 @@ import Head from 'next/head';
 import Link from 'next/link';
 import styles from '../../../styles/modules/Repos.module.scss';
 
-export default function ReposMCRP() {
+export default function ReposMCSRV() {
     return (
         <div id="l-container">
             <Head>
                 <title>Repository - NGRI HP</title>
             </Head>
             <main id="l-main">
-                <h1 className="title">Index of /repos/mc-rp</h1>
+                <h1 className="title">Index of /repos/mc-srv</h1>
                 <div className={`content ${styles.repoContents}`}>
                     <table>
                         <thead>
@@ -35,7 +35,7 @@ export default function ReposMCRP() {
                                     <i className="bi bi-folder2"></i>
                                 </td>
                                 <td>
-                                    <Link href="/repos/mc-rp/OasisTexture/"><a>OasisTexture/</a></Link>
+                                    <Link href="/repos/mc-srv/kougyou/"><a>kougyou/</a></Link>
                                 </td>
                             </tr>
                         </tbody>
