@@ -12,7 +12,8 @@ type Member = {
     birthday: string,
     gender: string[],
     name: string,
-    role: string[]
+    role: string[],
+    sp: string
 };
 
 type Props = {
