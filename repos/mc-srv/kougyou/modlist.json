@@ -180,6 +180,31 @@
         "version": "1.12.2-4.9.4.120"
     },
     {
+        "name": "Project Red - Compat",
+        "url": "curse:project-red-compat",
+        "version": "1.12.2-4.9.4.120"
+    },
+    {
+        "name": "Project Red - Integration",
+        "url": "curse:project-red-integration",
+        "version": "1.12.2-4.9.4.120"
+    },
+    {
+        "name": "Project Red - Lighting",
+        "url": "curse:project-red-illumination",
+        "version": "1.12.2-4.9.4.120"
+    },
+    {
+        "name": "Project Red - Mechanical",
+        "url": "curse:project-red-expansion",
+        "version": "1.12.2-4.9.4.120"
+    },
+    {
+        "name": "Project Red - World",
+        "url": "curse:project-red-exploration",
+        "version": "1.12.2-4.9.4.120"
+    },
+    {
         "name": "Reach Fix",
         "url": "curse",
         "version": "1.12.2-1.0.1"
