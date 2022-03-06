@@ -13,6 +13,7 @@ type Member = {
     gender: string[],
     name: string,
     role: string[],
+    ruby: string,
     sp: string
 };
 
