@@ -37,7 +37,7 @@
     {
         "name": "Chocolate Quest Repoured",
         "url": "curse:cqrepoured",
-        "version": "1.12.2-2.6.5B"
+        "version": "1.12.2-2.6.7B"
     },
     {
         "name": "CodeChicken Lib",
@@ -52,7 +52,7 @@
     {
         "name": "CreativeCore",
         "url": "curse",
-        "version": "v1.10.69_mc1.12.2"
+        "version": "v1.10.70_mc1.12.2"
     },
     {
         "name": "EnderCore",
@@ -87,7 +87,7 @@
     {
         "name": "GeckoLib",
         "url": "curse",
-        "version": "forge-1.12.2-3.0.13"
+        "version": "forge-1.12.2-3.0.21"
     },
     {
         "name": "GraveStone Mod",
@@ -123,6 +123,16 @@
         "name": "Industrial Foregoing",
         "url": "curse",
         "version": "1.12.2-1.11"
+    },
+    {
+        "name": "Industrial Wires",
+        "url": "curse",
+        "version": "1.7-36"
+    },
+    {
+        "name": "Integration Foregoing",
+        "url": "curse",
+        "version": "1.12.2-1.1"
     },
     {
         "name": "JourneyMap",
@@ -177,6 +187,31 @@
     {
         "name": "Project Red - Base",
         "url": "curse:project-red-core",
+        "version": "1.12.2-4.9.4.120"
+    },
+    {
+        "name": "Project Red - Compat",
+        "url": "curse:project-red-compat",
+        "version": "1.12.2-4.9.4.120"
+    },
+    {
+        "name": "Project Red - Integration",
+        "url": "curse:project-red-integration",
+        "version": "1.12.2-4.9.4.120"
+    },
+    {
+        "name": "Project Red - Lighting",
+        "url": "curse:project-red-illumination",
+        "version": "1.12.2-4.9.4.120"
+    },
+    {
+        "name": "Project Red - Mechanical",
+        "url": "curse:project-red-expansion",
+        "version": "1.12.2-4.9.4.120"
+    },
+    {
+        "name": "Project Red - World",
+        "url": "curse:project-red-exploration",
         "version": "1.12.2-4.9.4.120"
     },
     {

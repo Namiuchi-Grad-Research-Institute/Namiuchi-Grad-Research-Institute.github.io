@@ -3,8 +3,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css'
 import '../styles/globals.scss';
-import Head from 'next/head';
-import Script from 'next/script';
 import { AppProps } from 'next/app';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
