@@ -25,7 +25,8 @@ interface Params extends ParsedUrlQuery {
 }
 
 export default function Member({ member }: Props): JSX.Element {
-    const birthday = member.birthday === null ? '不明/非公開' : `${member.birthday.split('-')[0]}/${member.birthday.split('-')[1]}/${member.birthday.split('-')[2]}`;
+    const birthday: string = member.birthday === null ? '不明/非公開' : `${member.birthday.split('-')[0]}/${member.birthday.split('-')[1]}/${member.birthday.split('-')[2]}`;
+    const name: JSX.Element = member.ruby === null ? <>{member.name}</> : <ruby>{member.name}<rt>{member.ruby}</rt></ruby>
     return (
         <div id="l-container">
             <Head>
@@ -33,7 +34,7 @@ export default function Member({ member }: Props): JSX.Element {
             </Head>
             <Header />
             <main id="l-main">
-                <h1 className="title">{member.name}</h1>
+                <h1 className="title">{name}</h1>
                 <p>性別：女{member.gender[0].substring(1)}% 男{member.gender[1].substring(1)}%</p>
                 <p>誕生日(Y/M/D)：{birthday}</p>
                 <p>役職：{role2str(member.role)}</p>
