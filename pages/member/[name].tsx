@@ -35,7 +35,7 @@ export default function Member({ member }: Props): JSX.Element {
             <Header />
             <main id="l-main">
                 <h1 className="title">{member.ruby === null ? member.name : <ruby>{member.name}<rt>{member.ruby}</rt></ruby>}</h1>
-                <p>性別：女{member.gender[0].substring(1)}% 男{member.gender[1].substring(1)}%</p>
+                <p>性別：女{member.gender[0].substring(1)}% 男{member.gender[1].substring(1)}% ({getGenderString(member.gender[2])})</p>
                 <p>誕生日(Y/M/D)：{birthday}</p>
                 <p>役職：{role2str(member.role)}</p>
                 <p>自己紹介：{member.sp}</p>
@@ -56,5 +56,22 @@ export async function getStaticProps(ctx: GetStaticPropsContext<Params, false>):
     const res: Response = await fetch(`https://forum.ngri.jp/api/member/getdata/?name=${ctx.params!.name}`);
     const member: Member = await res.json();
     return { props: { member } };
+}
+
+function getGenderString(gender: string): string {
+    switch(gender) {
+        case 'A':
+            return '無性';
+        case 'B':
+            return '両性';
+        case 'F':
+            return '女性';
+        case 'M':
+            return '男性';
+        case 'N':
+            return '中性';
+        default:
+            return '？性(取得エラー)';
+    }
 }
 
