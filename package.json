@@ -77,6 +77,5 @@
         "build": "npx next build",
         "start": "npx next start"
     },
-    "type": "module",
     "version": "1.0.0"
 }
