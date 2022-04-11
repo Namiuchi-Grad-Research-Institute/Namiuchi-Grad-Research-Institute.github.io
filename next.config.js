@@ -12,6 +12,9 @@ const optimizedImagesConfig = {
 };
 
 module.exports = {
+    experimental: {
+        esmExternals: true
+    },
     exportPathMap: path.join(__dirname, 'out'),
     images: {
         disableStaticImages: true
@@ -25,9 +28,10 @@ module.exports = {
     trailingSlash: true,
     webpack: config => {
         config.module.rules.push({
-            test: /(\.ttf|\.otf|\.woff|\.woff2)$/,
+            test: /(\.eot|\.otf|\.ttf|\.woff|\.woff2)$/,
             use: 'raw-loader'
         });
         return config;
     }
 };
+
