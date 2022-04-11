@@ -12,6 +12,14 @@ const optimizedImagesConfig = {
 };
 
 module.exports = {
+    eslint: {
+        dirs: [
+            'components',
+            'hooks',
+            'lib',
+            'pages'
+        ]
+    },
     experimental: {
         esmExternals: true
     },

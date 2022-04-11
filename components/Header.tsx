@@ -3,13 +3,12 @@
 
 import Link from 'next/link';
 import styles from '../styles/modules/Header.module.scss';
-import { Image } from './Image';
 
 export default function Header(): JSX.Element {
     return (
         <header id="l-header">
             <div className={styles['header-logo']}>
-                <Image className={styles['logo-img']} src="https://forum.ngri.jp/res/logo-with-NGRI.png" alt="NGRIロゴ" layout="fill" objectFit="contain" />
+                <img className={styles['logo-img']} src="https://forum.ngri.jp/res/logo-with-NGRI.png" alt="NGRIロゴ" />
             </div>
             <nav id="l-navi">
                 <ul className="navi-list">

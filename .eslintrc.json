@@ -13,42 +13,162 @@
     "extends": [
         "eslint",
         "eslint:recommended",
+        "eslint-config-strict-mode",
+        "next",
         "next/core-web-vitals",
-        "plugin:node/recommended"
+        "plugin:@next/next/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "plugin:import/recommended",
+        "plugin:import/typescript",
+        "plugin:node/recommended",
+        "plugin:prettier/recommended",
+        "plugin:promise/recommended",
+        "plugin:react/jsx-runtime",
+        "plugin:react/recommended",
+        "plugin:react-hooks/recommended",
+        "prettier",
+        "standard",
+        "standard-jsx",
+        "standard-react"
     ],
     "globals": {},
     "ignorePatterns": [
-        "next-sitemap.js"
+        "**/node_modules/*",
+        "next-sitemap.js",
+        "node_modules"
     ],
+    "parser": "@typescript-eslint/parser",
     "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "project": [
+            "./tsconfig.json"
+        ],
         "sourceType": "module"
     },
     "plugins": [
-        "node"
+        "@typescript-eslint",
+        "import",
+        "next",
+        "node",
+        "prettier",
+        "promise",
+        "react",
+        "react-hooks"
     ],
+    "root": true,
     "rules": {
+        "@typescript-eslint/strict-boolean-expressions": [
+            "error",
+            {
+                "allowNumber": false,
+                "allowString": false
+            }
+        ],
         "arrow-body-style": "error",
         "arrow-parens": "error",
         "arrow-spacing": "error",
         "generator-star-spacing": "error",
+        "import/no-unresolved": "error",
         "no-duplicate-imports": "error",
         "no-useless-computed-key": "error",
         "no-useless-constructor": "error",
         "no-useless-rename": "error",
         "no-var": "error",
         "object-shorthand": "error",
+        "padding-line-between-statements": "off",
         "prefer-arrow-callback": "error",
         "prefer-const": "error",
         "prefer-rest-params": "error",
         "prefer-spread": "error",
         "prefer-template": "error",
+        "quotes": [
+            "error",
+            "single",
+            {
+                "allowTemplateLiterals": true,
+                "avoidEscape": true
+            }
+        ],
         "rest-spread-spacing": "error",
         "semi": [
             "error",
             "always"
         ],
+        "strict": [
+            "error",
+            "global"
+        ],
         "template-curly-spacing": "error",
         "yield-star-spacing": "error"
+    },
+    "settings": {
+        "componentWrapperFunctions": [
+            "observer",
+            {
+                "property": "styled"
+            },
+            {
+                "object": "Mobx",
+                "property": "observer"
+            },
+            {
+                "object": "<pragma>",
+                "property": "observer"
+            }
+        ],
+        "formComponents": [
+            "CustomForm",
+            {
+                "formAttribute": "endpoint",
+                "name": "form"
+            }
+        ],
+        "import/parsers": {
+            "@typescript-eslint/parser": [
+                ".ts",
+                ".tsx"
+            ]
+        },
+        "import/resolver": {
+            "typescript": {
+                "alwaysTryTypes": true,
+                "project": "./tsconfig.json"
+            }
+        },
+        "linkComponents": [
+            "Hyperlink",
+            {
+                "linkAttribute": "to",
+                "name": "Link"
+            }
+        ],
+        "next": {
+            "rootDir": "."
+        },
+        "propWrapperFunctions": [
+            "forbidExtraProps",
+            {
+                "object": "Object",
+                "property": "freeze"
+            },
+            {
+                "property": "myFavoriteWrapper"
+            },
+            {
+                "exact": true,
+                "property": "forbidExtraProps"
+            }
+        ],
+        "react": {
+            "createClass": "createReactClass",
+            "flowVersion": "0.53",
+            "fragment": "Fragment",
+            "pragma": "React",
+            "version": "detect"
+        }
     }
 }
 
