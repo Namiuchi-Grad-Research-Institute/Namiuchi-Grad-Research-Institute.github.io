@@ -22,7 +22,7 @@
         "module": "esnext",
         "moduleResolution": "node",
         "noEmit": true,
-        "noImplictReturns": true,
+        "noImplicitReturns": true,
         "noPropertyAccessFromIndexSignature": true,
         "noUncheckedIndexedAccess": true,
         "noUnusedLocals": true,
