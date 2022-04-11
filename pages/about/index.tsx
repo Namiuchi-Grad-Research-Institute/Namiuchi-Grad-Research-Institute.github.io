@@ -4,7 +4,6 @@ import Footer from '../../components/Footer';
 import Head from 'next/head';
 import Header from '../../components/Header';
 import Link from 'next/link';
-import { Image } from '../../components/Image';
 
 export default function About(): JSX.Element {
     return (
