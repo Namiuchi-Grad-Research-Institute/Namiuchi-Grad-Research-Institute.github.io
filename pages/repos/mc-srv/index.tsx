@@ -13,7 +13,7 @@ export default function ReposMCSRV() {
             </Head>
             <main id="l-main">
                 <h1 className="title">Index of /repos/mc-srv</h1>
-                <div className={`content ${styles.repoContents}`}>
+                <div className={`content ${styles['repoContents']}`}>
                     <table>
                         <thead>
                             <tr>

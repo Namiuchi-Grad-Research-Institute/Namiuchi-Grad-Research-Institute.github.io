@@ -13,7 +13,7 @@ export default function ReposMCRP() {
             </Head>
             <main id="l-main">
                 <h1 className="title">Index of /repos/mc-rp</h1>
-                <div className={`content ${styles.repoContents}`}>
+                <div className={`content ${styles['repoContents']}`}>
                     <table>
                         <thead>
                             <tr>
