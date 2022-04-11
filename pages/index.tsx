@@ -3,7 +3,6 @@
 import Footer from '../components/Footer';
 import Head from 'next/head';
 import Header from '../components/Header';
-import { Image } from '../components/Image';
 
 export default function Home(): JSX.Element {
     return (
