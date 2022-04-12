@@ -94,7 +94,7 @@
     "scripts": {
         "build": "npx next build",
         "dev": "npx next dev",
-        "export": "npx run-p export:export export:sitemap",
+        "export": "npx run-s export:export export:sitemap",
         "export:export": "npx next export",
         "export:sitemap": "npx next-sitemap",
         "lint": "npx next lint",
