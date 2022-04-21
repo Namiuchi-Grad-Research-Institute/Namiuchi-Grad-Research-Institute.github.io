@@ -15,12 +15,12 @@ export default function Reference(): JSX.Element {
             <main id="l-main">
                 <h1 className="title">リファレンス</h1>
                 <p>当研究所が主に使っているプログラミング言語・マークアップ言語のリファレンス、軽い入門を書いていきます。</p>
-                <ul>
-                    <li><Link href="/references/c/"><a>C言語・C++</a></Link></li>
-                    <li><Link href="/references/cs/"><a>C#</a></Link></li>
-                    <li><Link href="/references/html/"><a>HTML</a></Link></li>
-                    <li><Link href="/references/java/"><a>Java</a></Link></li>
-                    <li><Link href="/references/javascript/"><a>JavaScript</a></Link></li>
+                <ul class="l-grid">
+                    <li class="card"><p><Link href="/references/c/"><a>C言語・C++</a></Link></p></li>
+                    <li class="card"><p><Link href="/references/cs/"><a>C#</a></Link></p></li>
+                    <li class="card"><p><Link href="/references/html/"><a>HTML</a></Link></p></li>
+                    <li class="card"><p><Link href="/references/java/"><a>Java</a></Link></p></li>
+                    <li class="card"><p><Link href="/references/javascript/"><a>JavaScript</a></Link></p></li>
                 </ul>
             </main>
             <Footer />
