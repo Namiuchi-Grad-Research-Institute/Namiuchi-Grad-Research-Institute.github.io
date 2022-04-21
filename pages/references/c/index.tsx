@@ -16,6 +16,9 @@ export default function ReferenceC(): JSX.Element {
                 <h1 className="title">C言語・C++リファレンス</h1>
                 <p><Link href="/references/"><a>リファレンストップに戻る</a></Link></p>
                 <p>C言語・C++のリファレンス、軽い入門を書いていきます。</p>
+                <div className="l-grid">
+                    <Link href="/references/c/helloworld/"><a className="card">Hello world</a></Link>
+                </div>
             </main>
             <Footer />
         </div>
