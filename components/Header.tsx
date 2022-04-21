@@ -12,11 +12,11 @@ export default function Header(): JSX.Element {
             </div>
             <nav id="l-navi">
                 <ul className="navi-list">
-                    <Link href="/"><a><li>Home</li></a></Link>
-                    <Link href="/about/"><a><li>About</li></a></Link>
-                    <Link href="/references/"><a><li>References</li></a></Link>
-                    <a href="https://forum.ngri.jp/forum/"><li>Forum</li></a>
-                    <a href="https://w.atwiki.jp/ngri/"><li>Wiki</li></a>
+                    <li><Link href="/"><a>Home</a></Link></li>
+                    <li><Link href="/about/"><a>About</a></Link></li>
+                    <li><Link href="/references/"><a>References</a></Link></li>
+                    <li><a href="https://forum.ngri.jp/forum/">Forum</a></li>
+                    <li><a href="https://w.atwiki.jp/ngri/">Wiki</a></li>
                 </ul>
             </nav>
         </header>
