@@ -13,7 +13,8 @@ export default function Header(): JSX.Element {
             <nav id="l-navi">
                 <ul className="navi-list">
                     <li><Link href="/"><a>Home</a></Link></li>
-                    <li><Link href="/about"><a>About</a></Link></li>
+                    <li><Link href="/about/"><a>About</a></Link></li>
+                    <li><Link href="/references/"><a>References</a></Link></li>
                     <li><a href="https://forum.ngri.jp/forum/">Forum</a></li>
                     <li><a href="https://w.atwiki.jp/ngri/">Wiki</a></li>
                 </ul>
