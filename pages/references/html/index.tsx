@@ -3,6 +3,7 @@
 import Footer from '../../../components/Footer';
 import Head from 'next/head';
 import Header from '../../../components/Header';
+import Link from 'next/link';
 
 export default function ReferenceHTML(): JSX.Element {
     return (
