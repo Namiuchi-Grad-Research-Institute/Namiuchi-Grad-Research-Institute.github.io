@@ -69,7 +69,9 @@ function getGenderString(gender?: string): string {
             return '男性';
         case 'N':
             return '中性';
+        case 'S':
+            return '謎';
     }
-    return '？性(取得エラー)';
+    return '？(取得エラー)';
 }
 
