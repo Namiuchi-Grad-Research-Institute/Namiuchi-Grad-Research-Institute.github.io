@@ -16,28 +16,24 @@ export default function ReferenceCHelloWorld(): JSX.Element {
                 <h1 className="title">Hello world</h1>
                 <p><Link href="/references/c/"><a>C言語・C++リファレンスに戻る</a></Link></p>
                 <p>入門用プログラムの王道、Hello worldをC言語とC++で書き、軽く解説します。</p>
-                <pre>
-                    <code>
-                        // C言語
-                        #include &lt;stdio.h&gt;
+<pre><code>
+// C言語
+#include &lt;stdio.h&gt;
 
-                        int main(void) {
-                            printf(&quot;Hello world!\n&quot;);
-                            return 0;
-                        }
-                    </code>
-                </pre>
-                <pre>
-                    <code>
-                        // C++
-                        #include &lt;iostream&gt;
+int main(void) &lbrace;
+    printf(&quot;Hello world!\n&quot;);
+    return 0;
+&rbrace;
+</code></pre>
+<pre><code>
+// C++
+#include &lt;iostream&gt;
 
-                        int main(void) {
-                            std::cout << &quot;Hello world!&quot; << std::endl;
-                            return 0;
-                        }
-                    </code>
-                </pre>
+int main(void) &lbrace;
+    std::cout &lt;&lt; &quot;Hello world!&quot; &lt;&lt; std::endl;
+    return 0;
+&rbrace;
+</code></pre>
                 <h2>C言語版解説</h2>
                 <ul>
                     <li>
@@ -52,7 +48,7 @@ export default function ReferenceCHelloWorld(): JSX.Element {
                         <p>引数は関数を呼び出す際に与えられるデータの事で、今回は特に使わない為<pre><code>void</code></pre>と書き引数が無い事を示したが、実行時の引数をプログラム内で使う場合、<pre><code>int main(int argc, char **argv)</code></pre>と書くことにより使用可能となる。</p>
                     </li>
                     <li>
-                        <pre><code>{～}</code></pre>
+                        <pre><code>&lbrace;～&rbrace;</code></pre>
                         <p>囲まれた部分が一つのまとまりである事を表す。</p>
                         <p>この場合、main関数の内容を囲っている。</p>
                     </li>
@@ -83,7 +79,7 @@ export default function ReferenceCHelloWorld(): JSX.Element {
                         <p>簡単に言えば後述する<pre><code>std::～</code></pre>を使えるようにするための設定ファイルみたいな物を読み込む感じ。</p>
                     </li>
                     <li>
-                        <pre><code>std::cout << &quot;Hello world&quot; << std::endl;</code></pre>
+                        <pre><code>std::cout &lt;&lt; &quot;Hello world&quot; &lt;&lt; std::endl;</code></pre>
                         <p><pre><code>std::cout</code></pre>はコンソール画面を表す。</p>
                         <p><pre><code>std::endl</code></pre>は行の終端を表す。(簡単に言えば改行する)</p>
                     </li>
