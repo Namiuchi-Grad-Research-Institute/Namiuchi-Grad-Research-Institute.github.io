@@ -49,7 +49,7 @@
     flex-wrap: wrap;
     max-width: 800px;
     width: 100%;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .navi-list {
@@ -58,22 +58,22 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    > li {
+    li {
         @include tools.hover-underline('slide', 'bottom', 5px, tools.$header-link-color);
         display: block;
         flex: auto;
         margin: 1rem 0 10px 0;
         width: 100%;
         text-align: center;
-        a {
-            color: tools.$header-char-color;
-            margin: 0;
-            width: 100%;
-            transition: color .3s linear 0;
-        }
-        a:active, a:hover {
-            color: tools.$header-link-color;
-        }
+    }
+    a {
+        color: tools.$header-char-color;
+        margin: 0;
+        width: 100%;
+        transition: color .3s linear 0;
+    }
+    a:active, a:hover {
+        color: tools.$header-link-color;
     }
 }
 
