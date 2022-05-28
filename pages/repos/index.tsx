@@ -5,7 +5,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import styles from '../../styles/modules/Repos.module.scss';
 
-export default function ReposHome() {
+export default function Repos0() {
     return (
         <div id="l-container">
             <Head>
@@ -22,22 +22,7 @@ export default function ReposHome() {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td valign="top">
-                                    <i className="bi bi-arrow-90deg-up"></i>
-                                </td>
-                                <td>
-                                    <Link href="/"><a>Home</a></Link>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td valign="top">
-                                    <i className="bi bi-folder2"></i>
-                                </td>
-                                <td>
-                                    <Link href="/repos/mc-rp/"><a>mc-rp/</a></Link>
-                                </td>
-                            </tr>
+                            <tr><td valign="top"><i className="bi bi-arrow-90deg-up"></i></td><td><Link href="/"><a>Parent Directory</a></Link></td></tr><tr><td valign="top"><i className="bi bi-folder2"></i></td><td><Link href="/repos/assets/"><a>assets/</a></Link></td></tr><tr><td valign="top"><i className="bi bi-folder2"></i></td><td><Link href="/repos/deb/"><a>deb/</a></Link></td></tr><tr><td valign="top"><i className="bi bi-folder2"></i></td><td><Link href="/repos/maven/"><a>maven/</a></Link></td></tr><tr><td valign="top"><i className="bi bi-folder2"></i></td><td><Link href="/repos/mc-rp/"><a>mc-rp/</a></Link></td></tr><tr><td valign="top"><i className="bi bi-folder2"></i></td><td><Link href="/repos/mc-srv/"><a>mc-srv/</a></Link></td></tr>
                         </tbody>
                     </table>
                 </div>

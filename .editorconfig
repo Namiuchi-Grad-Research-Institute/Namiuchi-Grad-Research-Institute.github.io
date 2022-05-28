@@ -10,12 +10,14 @@ max_line_length = off
 tab_width = 4
 trim_trailing_whitespace = true
 
-[*.{j,t}s{,x}]
-block_commend_end = */
+[*.{j,t}s{,x} *.{,s}css]
+block_comment_end = */
 block_comment_start = /*
 curly_bracket_next_line = false
-line_comment = //
 quote_type = single
+
+[*.{j,t}s{,x}]
+line_comment = //
 spaces_around_brackets = none
 spaces_around_operators = true
 

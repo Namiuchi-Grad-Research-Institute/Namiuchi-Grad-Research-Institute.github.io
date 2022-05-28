@@ -24,13 +24,9 @@
         "plugin:node/recommended",
         "plugin:prettier/recommended",
         "plugin:promise/recommended",
-        "plugin:react/jsx-runtime",
-        "plugin:react/recommended",
         "plugin:react-hooks/recommended",
-        "prettier",
         "standard",
-        "standard-jsx",
-        "standard-react"
+        "standard-jsx"
     ],
     "globals": {},
     "ignorePatterns": [
@@ -53,9 +49,7 @@
         "import",
         "next",
         "node",
-        "prettier",
         "promise",
-        "react",
         "react-hooks"
     ],
     "root": true,

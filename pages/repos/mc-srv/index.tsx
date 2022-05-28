@@ -5,7 +5,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import styles from '../../../styles/modules/Repos.module.scss';
 
-export default function ReposMCSRV() {
+export default function Repos1() {
     return (
         <div id="l-container">
             <Head>
@@ -22,22 +22,7 @@ export default function ReposMCSRV() {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td valign="top">
-                                    <i className="bi bi-arrow-90deg-up"></i>
-                                </td>
-                                <td>
-                                    <Link href="/repos/"><a>Parent Directory</a></Link>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td valign="top">
-                                    <i className="bi bi-folder2"></i>
-                                </td>
-                                <td>
-                                    <Link href="/repos/mc-srv/kougyou/"><a>kougyou/</a></Link>
-                                </td>
-                            </tr>
+                            <tr><td valign="top"><i className="bi bi-arrow-90deg-up"></i></td><td><Link href="/repos"><a>Parent Directory</a></Link></td></tr><tr><td valign="top"><i className="bi bi-folder2"></i></td><td><Link href="/repos/mc-srv/kougyou/"><a>kougyou/</a></Link></td></tr>
                         </tbody>
                     </table>
                 </div>

@@ -5,14 +5,14 @@ import Head from 'next/head';
 import Link from 'next/link';
 import styles from '../../../styles/modules/Repos.module.scss';
 
-export default function Repos5() {
+export default function Repos7() {
     return (
         <div id="l-container">
             <Head>
                 <title>Repository - NGRI HP</title>
             </Head>
             <main id="l-main">
-                <h1 className="title">Index of /repos/mc-rp</h1>
+                <h1 className="title">Index of /repos/assets</h1>
                 <div className={`content ${styles['repoContents']}`}>
                     <table>
                         <thead>
@@ -22,7 +22,7 @@ export default function Repos5() {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr><td valign="top"><i className="bi bi-arrow-90deg-up"></i></td><td><Link href="/repos"><a>Parent Directory</a></Link></td></tr><tr><td valign="top"><i className="bi bi-folder2"></i></td><td><Link href="/repos/mc-rp/OasisTexture/"><a>OasisTexture/</a></Link></td></tr>
+                            <tr><td valign="top"><i className="bi bi-arrow-90deg-up"></i></td><td><Link href="/repos"><a>Parent Directory</a></Link></td></tr><tr><td valign="top"><i className="bi bi-folder2"></i></td><td><Link href="/repos/assets/images/"><a>images/</a></Link></td></tr>
                         </tbody>
                     </table>
                 </div>

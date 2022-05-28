@@ -5,7 +5,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import styles from '../../../../styles/modules/Repos.module.scss';
 
-export default function ReposMCSRVKougyou() {
+export default function Repos2() {
     return (
         <div id="l-container">
             <Head>
@@ -22,30 +22,7 @@ export default function ReposMCSRVKougyou() {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td valign="top">
-                                    <i className="bi bi-arrow-90deg-up"></i>
-                                </td>
-                                <td>
-                                    <Link href="/repos/mc-rp/"><a>Parent Directory</a></Link>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td valign="top">
-                                    <i className="bi bi-file-earmark-text"></i>
-                                </td>
-                                <td>
-                                    <Link href="/repos/mc-srv/kougyou/modlist.json"><a>modlist.json</a></Link>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td valign="top">
-                                    <i className="bi bi-file-earmark-text"></i>
-                                </td>
-                                <td>
-                                    <Link href="/repos/mc-srv/kougyou/modlist.schema"><a>modlist.schema</a></Link>
-                                </td>
-                            </tr>
+                            <tr><td valign="top"><i className="bi bi-arrow-90deg-up"></i></td><td><Link href="/repos/mc-srv"><a>Parent Directory</a></Link></td></tr><tr><td valign="top"><i className="bi bi-filetype-json"></i></td><td><Link href="/repos/mc-srv/kougyou/modlist.json"><a>modlist.json</a></Link></td></tr><tr><td valign="top"><i className="bi bi-file-earmark"></i></td><td><Link href="/repos/mc-srv/kougyou/modlist.schema"><a>modlist.schema</a></Link></td></tr>
                         </tbody>
                     </table>
                 </div>
