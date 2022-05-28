@@ -37,7 +37,7 @@ module.exports = {
     webpack: config => {
         config.module.rules.push({
             test: /(\.eot|\.otf|\.ttf|\.woff|\.woff2)$/,
-            use: 'raw-loader'
+            use: 'file-loader'
         });
         return config;
     }
