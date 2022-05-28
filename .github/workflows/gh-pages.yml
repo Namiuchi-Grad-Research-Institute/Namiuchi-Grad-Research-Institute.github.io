@@ -27,6 +27,7 @@ jobs:
       run: npm run export
     - name: add nojekyll
       run: touch ./out/.nojekyll
+    - run: git config core.autocrlf false
     - name: deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
