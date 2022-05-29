@@ -13,7 +13,6 @@
     "extends": [
         "eslint",
         "eslint:recommended",
-        "eslint-config-strict-mode",
         "next",
         "next/core-web-vitals",
         "plugin:@next/next/recommended",
@@ -22,17 +21,21 @@
         "plugin:import/recommended",
         "plugin:import/typescript",
         "plugin:node/recommended",
-        "plugin:prettier/recommended",
         "plugin:promise/recommended",
         "plugin:react-hooks/recommended",
         "standard",
         "standard-jsx"
     ],
-    "globals": {},
+    "globals": {
+        "Gtag": "readonly",
+        "JSX": "readonly"
+    },
     "ignorePatterns": [
         "**/node_modules/*",
+        "components/Image.tsx",
         "next-sitemap.js",
-        "node_modules"
+        "node_modules",
+        "pages/repos/**/*"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -45,32 +48,70 @@
         "sourceType": "module"
     },
     "plugins": [
+        "@next/next",
         "@typescript-eslint",
         "import",
-        "next",
         "node",
         "promise",
         "react-hooks"
     ],
     "root": true,
     "rules": {
-        "@typescript-eslint/strict-boolean-expressions": [
-            "error",
-            {
-                "allowNumber": false,
-                "allowString": false
-            }
-        ],
+        "@typescript-eslint/no-non-null-assertion": "off",
+        "@typescript-eslint/restrict-template-expressions": "off",
+        "@typescript-eslint/strict-boolean-expressions": "off",
         "arrow-body-style": "error",
         "arrow-parens": "error",
         "arrow-spacing": "error",
+        "dot-notation": "off",
         "generator-star-spacing": "error",
         "import/no-unresolved": "error",
+        "indent": "off",
+        "jsdoc/require-jsdoc": "off",
+        "jsx-quotes": [
+            "error",
+            "prefer-double"
+        ],
+        "keyword-spacing": [
+            "error",
+            {
+                "after": false,
+                "before": true,
+                "overrides": {
+                    "case": {
+                        "after": true
+                    },
+                    "const": {
+                        "after": true
+                    },
+                    "from": {
+                        "after": true
+                    },
+                    "import": {
+                        "after": true
+                    },
+                    "return": {
+                        "after": true
+                    }
+                }
+            }
+        ],
+        "max-len": "off",
         "no-duplicate-imports": "error",
+        "no-multiple-empty-lines": [
+            "error",
+            {
+                "max": 1,
+                "maxBOF": 0,
+                "maxEOF": 1
+            }
+        ],
         "no-useless-computed-key": "error",
         "no-useless-constructor": "error",
         "no-useless-rename": "error",
         "no-var": "error",
+        "node/no-missing-import": "off",
+        "node/no-unsupported-features/es-syntax": "off",
         "object-shorthand": "error",
         "padding-line-between-statements": "off",
         "prefer-arrow-callback": "error",
@@ -86,15 +127,25 @@
                 "avoidEscape": true
             }
         ],
+        "react/jsx-closing-bracket-location": "off",
+        "react/jsx-closing-tag-location": "off",
+        "react/jsx-first-prop-new-line": "off",
+        "react/jsx-indent": "off",
+        "react/jsx-no-comment-textnodes": "off",
         "rest-spread-spacing": "error",
         "semi": [
             "error",
             "always"
         ],
-        "strict": [
+        "space-before-function-paren": [
             "error",
-            "global"
+            {
+                "anonymous": "never",
+                "asyncArrow": "always",
+                "named": "never"
+            }
         ],
+        "strict": "off",
         "template-curly-spacing": "error",
         "yield-star-spacing": "error"
     },

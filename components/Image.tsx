@@ -1,224 +1,105 @@
-/* eslint-disable @next/next/no-img-element */
 /** @jsxImportSource @emotion/react */
-import { css } from '@emotion/react'
-import { useIntersectionObserver } from '../hooks/useIntersectionObserver'
-import { useRef } from 'react'
-import cn from 'classnames'
 
-const VALID_LOADING_VALUES = ['lazy', 'eager', undefined] as const
-type LoadingValue = typeof VALID_LOADING_VALUES[number]
+import cn from 'classnames';
+import { css } from '@emotion/react';
+import { useIntersectionObserver } from '../hooks/useIntersectionObserver';
+import { useRef } from 'react';
 
-type ImgElementStyle = NonNullable<JSX.IntrinsicElements['img']['style']>
+const VALID_LOADING_VALUES = ['lazy', 'eager', undefined] as const;
+const VALID_LAYOUT_VALUES = ['fill', 'responsive', undefined] as const;
 
-const VALID_LAYOUT_VALUES = ['fill', 'responsive', undefined] as const
-type LayoutValue = typeof VALID_LAYOUT_VALUES[number]
+type LoadingValue = typeof VALID_LOADING_VALUES[number];
 
-export type ImageProps = Omit<
-  JSX.IntrinsicElements['img'],
-  'src' | 'srcSet' | 'ref' | 'width' | 'height' | 'loading' | 'style'
-> & {
-  priority?: boolean
-  loading?: LoadingValue
-  objectFit?: ImgElementStyle['objectFit']
-  objectPosition?: ImgElementStyle['objectPosition']
-} & (StringImageProps | ObjectImageProps)
+type ImgElementStyle = NonNullable<JSX.IntrinsicElements['img']['style']>;
 
-type StringImageProps = {
-  src: string
-} & (
-  | { width?: never; height?: never; layout: 'fill' }
-  | {
-      width: number | string
-      height: number | string
-      layout?: Exclude<LayoutValue, 'fill'>
-    }
-)
+type LayoutValue = typeof VALID_LAYOUT_VALUES[number];
+
+export type ImageProps = Omit<JSX.IntrinsicElements['img'], 'src' | 'srcSet' | 'ref' | 'width' | 'height' | 'loading' | 'style'> & { loading?: LoadingValue, objectFit?: ImgElementStyle['objectFit'], objectPosition?: ImgElementStyle['objectPosition'], priority?: boolean } & (StringImageProps | ObjectImageProps);
+
+type StringImageProps = { src: string } & (| { width?: never; height?: never; layout: 'fill' } | { layout?: Exclude<LayoutValue, 'fill'>, height: number | string, width: number | string });
 
 interface StaticImageData {
-  src: string
-  height: number
-  width: number
-  blurDataURL?: string
+    blurDataURL?: string;
+    height: number;
+    src: string;
+    width: number;
 }
 
 interface StaticRequire {
-  default: StaticImageData
+    default: StaticImageData;
 }
 
-type StaticImport = StaticRequire | StaticImageData
+type StaticImport = StaticRequire | StaticImageData;
 
 type ObjectImageProps = {
-  src: StaticImport
-  width?: number | string
-  height?: number | string
-  layout?: LayoutValue
-  // placeholder?: PlaceholderValue
-  // blurDataURL?: never
+    // blurDataURL?: never;
+    height?: number | string;
+    layout?: LayoutValue;
+    // placeholder?: PlaceholderValue;
+    src: StaticImport;
+    width?: number | string;
 }
 
 function getInt(x: unknown): number | undefined {
-  if (typeof x === 'number') {
-    return x
-  }
-  if (typeof x === 'string') {
-    return parseInt(x, 10)
-  }
-  return undefined
+    if(typeof x === 'number') return x;
+    if(typeof x === 'string') return parseInt(x, 10);
+    return undefined;
 }
 
-const Image = ({
-  src,
-  width,
-  height,
-  sizes,
-  layout,
-  loading,
-  className,
-  objectFit,
-  objectPosition,
-  ...all
-}: ImageProps): JSX.Element => {
-  //TODO: priority
-  const rest: Partial<ImageProps> = all
-
-  const widthInt = getInt(width)
-  const heightInt = getInt(height)
-
-  let sizerStyle: JSX.IntrinsicElements['div']['style'] | undefined
-
-  const imgStyle: ImgElementStyle | undefined = {
-    objectFit,
-    objectPosition,
-  }
-
-  if (
-    typeof widthInt !== 'undefined' &&
-    typeof heightInt !== 'undefined' &&
-    layout !== 'fill'
-  ) {
-    // default : <Image src="i.png" width="100" height="100" />
-    const quotient = heightInt / widthInt
-    const paddingTop = isNaN(quotient) ? '100%' : `${quotient * 100}%`
-    sizerStyle = { display: 'block', boxSizing: 'border-box', paddingTop }
-  }
-
-  const isLazy = loading === 'lazy' || typeof loading === 'undefined'
-
-  const webp = require(`../../../public${src}?resize&format=webp`)
-  const img = require(`../../../public${src}`)
-  const ref = useRef<HTMLImageElement | null>(null)
-
-  const entry = useIntersectionObserver(ref, {
-    rootMargin: '200px',
-    freezeOnceVisible: true,
-  })
-
-  const isVisible = !isLazy || !!entry?.isIntersecting
-
-  let imgAttributes = {
-    width,
-    height,
-    src:
-      'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
-    srcSet: '',
-  }
-  let webpImgAttributes = {
-    srcSet: '',
-  }
-
-  if (isVisible) {
-    imgAttributes = {
-      ...imgAttributes,
-      src: img,
-      // src: img.src,
-      // srcSet: img.srcSet,
+export const Image = ({ className, height, layout, loading, objectFit, objectPosition, sizes, src, width, ...all }: ImageProps): JSX.Element => {
+    const rest: Partial<ImageProps> = all;
+    const widthInt = getInt(width);
+    const heightInt = getInt(height);
+    let sizerStyle: JSX.IntrinsicElements['div']['style'] | undefined;
+    const imgStyle: ImgElementStyle | undefined = {
+        objectFit,
+        objectPosition
+    };
+    if(typeof widthInt !== 'undefined' && typeof heightInt !== 'undefined' && layout !== 'fill') {
+        const quotient = heightInt / widthInt;
+        const paddingTop = isNaN(quotient) ? '100%' : `${quotient * 100}%`;
+        sizerStyle = { boxSizing: 'border-box', display: 'block', paddingTop };
     }
-    webpImgAttributes = {
-      srcSet: webp.srcSet,
+    const isLazy = loading === 'lazy' || typeof loading === 'undefined';
+    const webp = require(`../../../public${src}?resize&format=webp`);
+    const img = require(`../../../public${src}`);
+    const ref = useRef<HTMLImageElement | null>(null);
+    const entry = useIntersectionObserver(ref, {
+        freezeOnceVisible: true,
+        rootMargin: '200px'
+    });
+    const isVisible = !isLazy || !!entry?.isIntersecting;
+    let imgAttributes = {
+        height,
+        src: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
+        srcSet: '',
+        width
+    };
+    let webpImgAttributes = {
+        srcSet: ''
+    };
+    if(isVisible) {
+        imgAttributes = {
+            ...imgAttributes,
+            src: img
+        };
+        webpImgAttributes = {
+            srcSet: webp.srcSet
+        };
     }
-  }
-
-  return (
-    <div
-      css={style.wrap}
-      className={cn({ responsive: layout !== 'fill', fill: layout === 'fill' })}
-    >
-      {sizerStyle && <div style={sizerStyle} />}
-      <picture css={style.picture}>
-        <source {...webpImgAttributes} type="image/webp" />
-        <img
-          {...rest}
-          {...imgAttributes}
-          decoding="async"
-          alt=""
-          className={className}
-          ref={ref}
-          style={imgStyle}
-          css={style.img}
-        />
-      </picture>
-    </div>
-  )
-}
+    return (
+        <div css={style.wrap} className={cn({ responsive: layout !== 'fill', fill: layout === 'fill' })}>
+            {sizerStyle && <div style={sizerStyle} />}
+            <picture css={style.picture}>
+                <source {...webpImgAttributes} type="image/webp" />
+                <img {...rest} {...imgAttributes} decoding="async" alt="" className={className} ref={ref} style={imgStyle} css={style.img} />
+            </picture>
+        </div>
+    );
+};
 
 const style = {
-  wrap: css`
-    &.responsive {
-      display: block;
-      overflow: hidden;
-      position: relative;
-      box-sizing: border-box;
-      margin: 0;
-    }
-    &.fill {
-      display: block;
-      overflow: hidden;
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      box-sizing: border-box;
-      margin: 0;
-    }
-  `,
-  img: css`
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    box-sizing: border-box;
-    border: none;
-    margin: auto;
-    display: block;
-    width: 0;
-    height: 0;
-    min-width: 100%;
-    max-width: 100%;
-    min-height: 100%;
-    max-height: 100%;
-  `,
-  picture: css`
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-
-    box-sizing: border-box;
-    padding: 0;
-    border: none;
-    margin: auto;
-
-    display: block;
-    width: 100%;
-    height: 100%;
-    min-width: 100%;
-    max-width: 100%;
-    min-height: 100%;
-    max-height: 100%;
-  `,
-}
-
-export { Image }
+    img: css`border:none;bottom:0;box-sizing:border-box;display:block;height:0;left:0;margin:auto;max-height:100%;max-width:100%;min-height:100%;min-width:100%;position:absolute;right:0;top:0;width:0`,
+    picture: css`border:none;bottom:0;box-sizing:border-box;display:block;height:100%;left:0;margin:auto;max-height:100%;max-width:100%;min-height:100%;min-width:100%;padding:0;position:absolute;right:0;top:0;width:100%`,
+    wrap: css`&.responsive{box-sizing:border-box;display:block;margin:0;overflow:hidden;position:relative}&.fill{bottom:0;box-sizing:border-box;display:block;left:0;margin:0;overflow:hidden;position:absolute;right:0;top:0}`
+};

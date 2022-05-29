@@ -4,12 +4,17 @@
 import { execSync } from 'child_process';
 import { readdirSync, statSync, readFileSync, writeFileSync } from 'fs';
 
-function index(path: string, id: number) {
-    let ROOT: string = '..';
-    const depth: number = (path.match(/\//g) || []).length;
+/**
+ * @param {string} path
+ * @param {number} id
+ * @return {void}
+ */
+function index(path, id) {
+    /** @type {string} */ let ROOT = '..';
+    /** @type {number} */ const depth = (path.match(/\//g) || []).length;
     for(let i = 0; i < depth; i++) ROOT += '/..';
-    const DIR: string = path.replace(/public\//, '');
-    let FILELIST: string = `<tr><td valign="top"><i className="bi bi-arrow-90deg-up"></i></td><td><Link href="/${DIR.split('/').filter((v, i, a) => i !== a.length - 1).join('/')}"><a>Parent Directory</a></Link></td></tr>`;
+    /** @type {string} */ const DIR = path.replace(/public\//, '');
+    /** @type {string} */ let FILELIST = `<tr><td valign="top"><i className="bi bi-arrow-90deg-up"></i></td><td><Link href="/${DIR.split('/').filter((v, i, a) => i !== a.length - 1).join('/')}"><a>Parent Directory</a></Link></td></tr>`;
     readdirSync(path).forEach(f => {
         if(statSync(`${path}/${f}`).isDirectory()) {
             FILELIST += `<tr><td valign="top"><i className="bi bi-folder2"></i></td><td><Link href="/${DIR}/${f}/"><a>${f}/</a></Link></td></tr>`;
@@ -320,15 +325,14 @@ function index(path: string, id: number) {
                 return;
         }
     });
-    const TMPL: string = readFileSync('repos_idx_tmpl.txt').toString().replace(/\$\{ROOT\}/g, ROOT).replace(/\$\{DIR\}/g, DIR).replace(/\$\{NAME\}/g, `${id}`).replace(/\$\{FILELIST\}/g, FILELIST);
+    /** @type {string} */ const TMPL = readFileSync('repos_idx_tmpl.txt').toString().replace(/\$\{ROOT\}/g, ROOT).replace(/\$\{DIR\}/g, DIR).replace(/\$\{NAME\}/g, `${id}`).replace(/\$\{FILELIST\}/g, FILELIST);
     writeFileSync(`pages/${DIR}/index.tsx`, TMPL);
 }
 
-let i = 0;
+/** @type {number} */let i = 0;
 
 execSync('find public/repos -type d').toString().split('\n').forEach(d => {
     if(d === '') return;
-    console.debug(`Dir: ${d}`);
     execSync(`mkdir -p pages/${d.replace(/public\//g, '')}`);
     index(d, i++);
 });

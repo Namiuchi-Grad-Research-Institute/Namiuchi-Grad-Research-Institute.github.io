@@ -1,8 +1,8 @@
 'use strict';
 
 export function role2str(role: string[]): string {
-    let str: string = '社員';
-    role.map(e => {
+    let str = '社員';
+    role.forEach(e => {
         switch(e) {
             case 'design2d':
                 str += '・2Dデザイナー';

@@ -1,4 +1,4 @@
 #!/bin/bash
 rm -rf ./pages/repos/*
-npx ts-node --skipProject ./generate_repos_index.ts
+node ./generate_repos_index.mjs
 exit 0
