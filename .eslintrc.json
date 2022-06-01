@@ -18,13 +18,9 @@
         "plugin:@next/next/recommended",
         "plugin:@typescript-eslint/recommended",
         "plugin:@typescript-eslint/recommended-requiring-type-checking",
-        "plugin:import/recommended",
-        "plugin:import/typescript",
         "plugin:node/recommended",
         "plugin:promise/recommended",
-        "plugin:react-hooks/recommended",
-        "standard",
-        "standard-jsx"
+        "plugin:react-hooks/recommended"
     ],
     "globals": {
         "Gtag": "readonly",
@@ -50,7 +46,6 @@
     "plugins": [
         "@next/next",
         "@typescript-eslint",
-        "import",
         "node",
         "promise",
         "react-hooks"
@@ -63,9 +58,12 @@
         "arrow-body-style": "error",
         "arrow-parens": "error",
         "arrow-spacing": "error",
+        "curly": [
+            "error",
+            "multi"
+        ],
         "dot-notation": "off",
         "generator-star-spacing": "error",
-        "import/no-unresolved": "error",
         "indent": "off",
         "jsdoc/require-jsdoc": "off",
         "jsx-quotes": [
@@ -106,11 +104,20 @@
                 "maxEOF": 1
             }
         ],
+        "no-use-before-define": [
+            "error",
+            {
+                "classes": false,
+                "functions": false,
+                "variables": false
+            }
+        ],
         "no-useless-computed-key": "error",
         "no-useless-constructor": "error",
         "no-useless-rename": "error",
         "no-var": "error",
         "node/no-missing-import": "off",
+        "node/no-unpublished-import": "off",
         "node/no-unsupported-features/es-syntax": "off",
         "object-shorthand": "error",
         "padding-line-between-statements": "off",
