@@ -3,24 +3,19 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import '../styles/globals.scss';
+import Head from 'next/head';
 import { AppProps } from 'next/app';
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
-import { pageview } from '../lib/gtag';
+import { GoogleAnalytics, usePageView } from '../lib/gtag';
 
 export default function MyApp({ Component, pageProps }: AppProps): JSX.Element {
-    const router = useRouter();
-    useEffect(() => {
-        router.events.on('routeChangeComplete', handleRouteChange);
-        return () => {
-            router.events.off('routeChangeComplete', handleRouteChange);
-        };
-    }, [router.events]);
+    usePageView();
     return (
-        <Component {...pageProps} />
+        <>
+            <Head>
+                <GoogleAnalytics />
+                <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+            </Head>
+            <Component {...pageProps} />
+        </>
     );
-}
-
-function handleRouteChange(url: string): void {
-    pageview(url);
 }

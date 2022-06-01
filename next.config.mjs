@@ -17,7 +17,7 @@ const nextConfig = {
     experimental: {
         esmExternals: true
     },
-    exportPathMap: join(process.cwd(), 'out'),
+    exportPathMap: () => join(process.cwd(), 'out'),
     headers: async () => {
         return [
             {
@@ -36,7 +36,7 @@ const nextConfig = {
                     },
                     {
                         key: 'content-security-policy',
-                        value: 'default-src \'self\'; font-src \'self\' https://fonts.gstatic.com; script-src \'self\' \'unsafe-inline\' https://www.googletagmanager.com; style-src \'self\' https://fonts.googleapis.com'
+                        value: 'default-src \'self\'; connect-src \'self\' https://forum.ngri.jp; font-src \'self\' https://fonts.gstatic.com; img-src \'self\' https://forum.ngri.jp; script-src \'self\' \'unsafe-eval\' \'unsafe-inline\' https://www.googletagmanager.com; style-src \'self\' \'unsafe-inline\' https://fonts.googleapis.com'
                     },
                     {
                         key: 'strict-transport-security',

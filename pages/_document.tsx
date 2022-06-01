@@ -1,8 +1,6 @@
 'use strict';
 
 import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/document';
-import Script from 'next/script';
-import { GA_TRACKING_ID } from '../lib/gtag';
 
 export default class MyDocument extends Document<{ prefix?: string }> {
     static async getInitialProps(ctx: DocumentContext) {
@@ -16,19 +14,6 @@ export default class MyDocument extends Document<{ prefix?: string }> {
         return (
             <Html lang="ja" prefix={this.props.prefix}>
                 <Head>
-                    {/* Global Site Tag (gtag.js) - Google Analytics */}
-                    <Script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
-                    <Script id="NGRIHPSCRIPT0001" dangerouslySetInnerHTML={{
-                        __html: `
-                            window.dataLayer = window.dataLayer || [];
-                            function gtag(){dataLayer.push(arguments);}
-                            gtag('js', new Date());
-                            gtag('config', '${GA_TRACKING_ID}', {
-                                page_path: window.location.pathname,
-                            });
-                        `
-                    }} />
-                    <meta name="viewport" content="width=device-width,initialize-scale=1" />
                     <meta name="msapplication-square70x70logo" content="/site-tile-70x70.png" />
                     <meta name="msapplication-square150x150logo" content="/site-tile-150x150.png" />
                     <meta name="msapplication-wide310x150logo" content="/site-tile-310x150.png" />
