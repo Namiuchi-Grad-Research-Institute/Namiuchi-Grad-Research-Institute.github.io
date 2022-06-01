@@ -15,7 +15,7 @@ export const GA_TRACKING_ID = process.env['NEXT_PUBLIC_GA_ID'] || '';
 
 export const existsID = GA_TRACKING_ID !== '';
 
-export const GoogleAnalytics = (): JSX.Element => {
+export function GoogleAnalytics(): JSX.Element {
     return (
         <>
             {existsID && (
@@ -29,7 +29,7 @@ export const GoogleAnalytics = (): JSX.Element => {
     );
 }
 
-export const event = ({ action, category, label, value }: { action: Gtag.EventNames | string, category?: string, label?: string, value?: number }): void => {
+export function event({ action, category, label, value }: { action: Gtag.EventNames | string, category?: string, label?: string, value?: number }): void {
     if(!GA_TRACKING_ID) return;
     window.gtag('event', action, {
         event_category: category,
@@ -38,14 +38,14 @@ export const event = ({ action, category, label, value }: { action: Gtag.EventNa
     });
 }
 
-export const pageview = (path?: string): void => {
+export function pageview(path?: string): void {
     if(!GA_TRACKING_ID) return;
     if(typeof window.gtag !== 'undefined') window.gtag('config', GA_TRACKING_ID, {
         page_path: path
     });
 }
 
-export const usePageView = (): void => {
+export function usePageView(): void {
     const router: NextRouter = useRouter();
     useEffect(() => {
         if(!existsID) return;
@@ -54,3 +54,4 @@ export const usePageView = (): void => {
         return () => router.events.off('routeChangeComplete', handleRouteChange);
     }, [router.events]);
 }
+

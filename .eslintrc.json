@@ -58,11 +58,19 @@
         "arrow-body-style": "error",
         "arrow-parens": "error",
         "arrow-spacing": "error",
+        "consistent-return": "off",
         "curly": [
             "error",
             "multi"
         ],
         "dot-notation": "off",
+        "func-style": [
+            "error",
+            "declaration",
+            {
+                "allowArrowFunctions": true
+            }
+        ],
         "generator-star-spacing": "error",
         "indent": "off",
         "jsdoc/require-jsdoc": "off",
