@@ -28,7 +28,6 @@
         "@types/bootstrap": "^5.1.12",
         "@types/eslint": "^8.4.2",
         "@types/express": "^4.17.13",
-        "@types/gtag.js": "^0.0.10",
         "@types/imagemin-mozjpeg": "^8.0.1",
         "@types/jquery": "^3.5.14",
         "@types/node": "^17.0.36",

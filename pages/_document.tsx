@@ -1,6 +1,7 @@
 'use strict';
 
 import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/document';
+import Script from 'next/script';
 
 export default class MyDocument extends Document<{ prefix?: string }> {
     static async getInitialProps(ctx: DocumentContext) {
@@ -14,6 +15,18 @@ export default class MyDocument extends Document<{ prefix?: string }> {
         return (
             <Html lang="ja" prefix={this.props.prefix}>
                 <Head>
+                    <meta charSet="utf-8" />
+                    <meta httpEquiv="access-control-allow-methods" content="get, options, post" />
+                    <meta httpEquiv="access-control-allow-origin" content="*" />
+                    <meta httpEquiv="access-control-max-age" content="604800" />
+                    <meta httpEquiv="content-security-policy" content="default-src 'self'; connect-src 'self' https://forum.ngri.jp; font-src 'self' https://fonts.gstatic.com; img-src 'self' https://forum.ngri.jp; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com" />
+                    <meta httpEquiv="strict-transport-security" content="max-age=31536000" />
+                    <meta httpEquiv="x-content-type-options" content="nosniff" />
+                    <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+                    <meta httpEquiv="x-xss-protection" content="1; mode=block" />
+                    {/* Global Site Tag (gtag.js) - Google Analytics */}
+                    <Script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env['NEXT_PUBLIC_GA_ID']}`} strategy="afterInteractive" />
+                    <Script src="/js/gtag.js" strategy="afterInteractive" />
                     <meta name="msapplication-square70x70logo" content="/site-tile-70x70.png" />
                     <meta name="msapplication-square150x150logo" content="/site-tile-150x150.png" />
                     <meta name="msapplication-wide310x150logo" content="/site-tile-310x150.png" />
