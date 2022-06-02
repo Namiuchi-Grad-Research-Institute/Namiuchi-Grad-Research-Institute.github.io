@@ -22,23 +22,6 @@ export default function PageRead(): JSX.Element {
     const router: NextRouter = useRouter();
     /* eslint-disable-next-line @typescript-eslint/no-unsafe-return */
     const { data: page, error } = useSWR<Page, Error>(`https://forum.ngri.jp/api/article/getdata/?id=${router.query['id']}`, async (url: string) => await (await fetch(url)).json());
-    if(!router.query['id']) return (
-        <div id="l-container">
-            <Head>
-                <title>記事読み込みエラー - NGRI</title>
-            </Head>
-            <Header />
-            <main id="l-main">
-                <h1 className="title">記事読み込みエラー</h1>
-                <div className={styles['contents']}>
-                    <p>記事の読み込み中にエラーが発生しました。</p>
-                    <p>記事IDが指定されていません。</p>
-                    <p><Link href="/"><a>トップに戻る</a></Link></p>
-                </div>
-            </main>
-            <Footer />
-        </div>
-    );
     if(error) return (
         <div id="l-container">
             <Head>
