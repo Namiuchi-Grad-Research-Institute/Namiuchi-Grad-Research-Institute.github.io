@@ -40,9 +40,6 @@ export default function PageRead(): JSX.Element {
     );
     if(!page) return (
         <div id="l-container">
-            <Head>
-                <title>読み込み中 - NGRI</title>
-            </Head>
             <Header />
             <main id="l-main">
                 <h1 className="title">読み込み中</h1>
