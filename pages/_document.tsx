@@ -19,7 +19,7 @@ export default class MyDocument extends Document<{ prefix?: string }> {
                     <meta httpEquiv="access-control-allow-methods" content="get, options, post" />
                     <meta httpEquiv="access-control-allow-origin" content="*" />
                     <meta httpEquiv="access-control-max-age" content="604800" />
-                    <meta httpEquiv="content-security-policy" content="default-src 'self'; connect-src 'self' https://forum.ngri.jp; font-src 'self' https://fonts.gstatic.com; img-src 'self' https://forum.ngri.jp; script-src 'self' 'unsafe-eval' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com" />
+                    <meta httpEquiv="content-security-policy" content="default-src 'self'; connect-src 'self' https://forum.ngri.jp; font-src 'self' https://fonts.gstatic.com; img-src 'self' https://forum.ngri.jp; script-src 'script-src-elem' 'self' 'unsafe-eval' 'unsafe-inline'　https://storage.ko-fi.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com" />
                     <meta httpEquiv="strict-transport-security" content="max-age=31536000" />
                     <meta httpEquiv="x-content-type-options" content="nosniff" />
                     <meta httpEquiv="x-ua-compatible" content="ie=edge" />
