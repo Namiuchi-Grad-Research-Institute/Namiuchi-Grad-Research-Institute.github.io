@@ -38,7 +38,7 @@ export default function Member({ member }: Props): JSX.Element {
                 <p>性別：女{member.gender[0].substring(1)}% 男{member.gender[1].substring(1)}% ({getGenderString(member.gender[2])})</p>
                 <p>誕生日(Y/M/D)：{birthday}</p>
                 <p>役職：{role2str(member.role)}</p>
-                <p>{`自己紹介：${member.sp}`}</p>
+                <p dangerouslySetInnerHTML={{ __html: `自己紹介：${member.sp}` }}></p>
             </main>
             <Footer />
         </div>
